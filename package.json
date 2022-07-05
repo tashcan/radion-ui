@@ -1,0 +1,36 @@
+{
+  "name": "radion",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "build": "turbo run build",
+    "test": "turbo run test --force",
+    "check": "turbo run check",
+    "lint": "turbo run lint",
+    "format": "turbo run format",
+    "precommit": "turbo run precommit",
+    "release": "changeset publish",
+    "prepare": "turbo run prepare --filter \"./packages/**\"",
+    "update-references": "pnpm dlx @bessonovs/set-project-references --save"
+  },
+  "author": "",
+  "type": "module",
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "@svitejs/changesets-changelog-github-compact": "^1.1.0",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
+    "dugite": "^2.5.1",
+    "eslint": "^8.45.0",
+    "eslint-plugin-import": "^2.27.5",
+    "prettier": "^3.0.0",
+    "rollup": "^3.26.3",
+    "svelte": "^4.1.0",
+    "turbo": "^1.10.9",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "eslint-plugin-svelte": "^2.32.3"
+  }
+}
