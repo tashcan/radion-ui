@@ -13,7 +13,9 @@
     CardHeader,
     CardTitle,
     CardSubtitle,
-    CardContent
+    CardContent,
+
+	  RadioGroup
   } from '@radion/ui';
 
   import { Icon } from '@steeze-ui/svelte-icon';
@@ -167,6 +169,12 @@
               <Button class="h-8" iconRight={AdjustmentsVertical}>Test</Button>
           </CardContent>
         </Card>
+      </div>
+      <div class="w-full">
+        <RadioGroup options={[{value: 1, label: 'Option 1'}, {value: 2, label: 'Option 2'}]} />
+      </div>
+      <div class="w-full">
+        <RadioGroup horizontal options={[{value: 1, label: 'Option 1'}, {value: 2, label: 'Option 2'}]} />
       </div>
     </div>
   </div>

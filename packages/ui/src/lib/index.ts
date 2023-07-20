@@ -18,3 +18,5 @@ export { default as CardHeader } from './CardHeader.svelte';
 export { default as CardTitle } from './CardTitle.svelte';
 export { default as CardSubtitle } from './CardSubtitle.svelte';
 export { default as CardContent } from './CardContent.svelte';
+
+export { default as RadioGroup } from './RadioGroup.svelte';
