@@ -39,6 +39,7 @@
 	export let sticky = false;
 	export let forcePadding = false;
 	export let horizontal = false;
+	export let filter: string = '';
 
 	let clazz = '';
 	export { clazz as class };
@@ -65,8 +66,19 @@
 
 	let sortField: keyof ItemType | null = null;
 	let sortAsc = false;
+
+	$: filteredItems = filter.length > 0 ? items.filter((item) => {
+		for (const header of headers) {
+			const v = String(item[header.value as keyof ItemType]);
+			if (v.includes(filter)) {
+				return true;
+			}
+		}
+		return false;
+	}) : Array.from(items);
+
 	$: sortedItems = sortField
-		? items.sort((a, b) => {
+		? filteredItems.sort((a, b) => {
 				let aV = a[sortField ?? 'id'];
 				let bV = b[sortField ?? 'id'];
 				if (typeof aV === 'number' && typeof bV === 'number') {
@@ -76,7 +88,7 @@
 				}
 				return 0;
 		  })
-		: items;
+		: filteredItems;
 
 	$: {
 		let sortParts = sort?.split('_');

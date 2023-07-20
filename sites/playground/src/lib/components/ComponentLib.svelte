@@ -29,6 +29,8 @@
 
   let checked = true;
 
+  let tableFilter = '';
+
   let listboxValue;
   let dropdownValue;
 
@@ -142,6 +144,10 @@
       </div>
       <div class="w-full">
         <Table sortable headers={tableHeaders} items={tableItems} />
+      </div>
+      <div class="w-full">
+        <TextInput placeholder="Search" bind:value={tableFilter} />
+        <Table sortable headers={tableHeaders} items={tableItems} filter={tableFilter} />
       </div>
     </div>
   </div>
