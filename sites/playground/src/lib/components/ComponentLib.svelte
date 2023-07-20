@@ -8,7 +8,12 @@
     Pagination,
     Listbox,
     Checkbox,
-	  Table
+	  Table,
+    Card,
+    CardHeader,
+    CardTitle,
+    CardSubtitle,
+    CardContent
   } from '@radion/ui';
 
   import { Icon } from '@steeze-ui/svelte-icon';
@@ -148,6 +153,20 @@
       <div class="w-full">
         <TextInput placeholder="Search" bind:value={tableFilter} />
         <Table sortable headers={tableHeaders} items={tableItems} filter={tableFilter} />
+      </div>
+
+      <div class="w-full">
+        <Card class="p-4 flex flex-col dark:bg-dark-500 bg-light-500 rounded-2 shadow-lg">
+          <CardHeader>
+              <CardTitle>Some kind of Title or whatever</CardTitle>
+              <CardSubtitle>This subtitle</CardSubtitle>
+          </CardHeader>
+          <CardContent>
+              <Button class="h-8">Test</Button>
+              <Button class="h-8" iconLeft={AdjustmentsVertical}>Test</Button>
+              <Button class="h-8" iconRight={AdjustmentsVertical}>Test</Button>   
+          </CardContent>
+        </Card>
       </div>
     </div>
   </div>
