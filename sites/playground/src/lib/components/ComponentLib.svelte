@@ -15,7 +15,8 @@
     CardSubtitle,
     CardContent,
 
-	  RadioGroup
+	  RadioGroup,
+    Switch
   } from '@radion/ui';
 
   import { Icon } from '@steeze-ui/svelte-icon';
@@ -76,6 +77,8 @@
     col4: 'Longer Magic',
   }
   ];
+
+  let switchChecked = false;
 </script>
 
 <div class="flex flex-col gap-y-2">
@@ -175,6 +178,11 @@
       </div>
       <div class="w-full">
         <RadioGroup horizontal options={[{value: 1, label: 'Option 1'}, {value: 2, label: 'Option 2'}]} />
+      </div>
+      <div class="w-full">
+        <Switch bind:checked={switchChecked}>
+          I'm a sexy Switch {switchChecked ? 'ON' : 'OFF'}
+        </Switch>
       </div>
     </div>
   </div>

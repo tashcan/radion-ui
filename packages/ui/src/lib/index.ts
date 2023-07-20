@@ -11,7 +11,7 @@ export { default as PasswordInput } from './PasswordInput.svelte';
 export { default as Slider } from './Slider.svelte';
 export { default as Table } from './Table.svelte';
 export { default as TextInput } from './TextInput.svelte';
-export { default as Toggle } from './Toggle.svelte';
+export { default as Toggle } from './Switch.svelte';
 
 export { default as Card } from './Card.svelte';
 export { default as CardHeader } from './CardHeader.svelte';
@@ -20,3 +20,5 @@ export { default as CardSubtitle } from './CardSubtitle.svelte';
 export { default as CardContent } from './CardContent.svelte';
 
 export { default as RadioGroup } from './RadioGroup.svelte';
+
+export { default as Switch } from './Switch.svelte';
