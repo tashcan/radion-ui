@@ -7,7 +7,8 @@
     Button,
     Pagination,
     Listbox,
-    Checkbox
+    Checkbox,
+	  Table
   } from '@radion/ui';
 
   import { Icon } from '@steeze-ui/svelte-icon';
@@ -30,6 +31,42 @@
 
   let listboxValue;
   let dropdownValue;
+
+  let tableHeaders = [
+    {
+      text: 'Hi',
+      value: 'col1',
+    },
+    {
+      text: 'A bit more',
+      value: 'col2',
+    },
+    {
+      text: 'What is even happening',
+      value: 'col3',
+    },
+    {
+      text: 'This is some super long text or something',
+      value: 'col4',
+    }
+  ];
+
+  let tableItems = [
+  {
+    id: 1,
+    col1: 'Magic',
+    col2: 'Longer Magic',
+    col3: 'Intense fucking Magic',
+    col4: 'Actually Intense fucking Magic',
+  },
+  {
+    id: 2,
+    col1: 'All the shit',
+    col2: 'Longer Magic',
+    col3: 'Actually Intense fucking Magic',
+    col4: 'Longer Magic',
+  }
+  ];
 </script>
 
 <div class="flex flex-col gap-y-2">
@@ -66,7 +103,7 @@
       </div>
 
       <div class="w-full flex flex-col gap-y-2">
-        <Listbox value={listboxValue} options={[{ value: 1 }]} />
+        <Listbox value={listboxValue} options={[{ name: 'Testing', value: 1 }, { name: 'Testing 2', value: 2 }]} />
         <Dropdown
           label="Tier"
           value={dropdownValue}
@@ -96,6 +133,15 @@
       <div class="w-full">
         <Checkbox bind:checked>Magical</Checkbox>
         {checked}
+      </div>
+      <div class="w-full">
+        <Table headers={tableHeaders} items={tableItems} />
+      </div>
+      <div class="w-full">
+        <Table horizontal headers={tableHeaders} items={tableItems} />
+      </div>
+      <div class="w-full">
+        <Table sortable headers={tableHeaders} items={tableItems} />
       </div>
     </div>
   </div>

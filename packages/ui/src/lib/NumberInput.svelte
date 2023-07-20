@@ -56,7 +56,7 @@
 			on:click={decrement}
 			class={`number-input-button rounded-l focus:z-30 dark:border-transparent h-8 px-1 input-focus ${backgroundClass}`}
 		>
-			<span class="m-auto text-xl font-thin">−</span>
+			<span class="m-auto text-xl font-thin v-sub">−</span>
 		</button>
 	{/if}
 	<input
@@ -78,7 +78,7 @@
 			on:click={increment}
 			class={`number-input-button rounded-r focus:z-30 dark:border-transparent input-focus h-8 px-1 ${backgroundClass}`}
 		>
-			<span class="m-auto text-xl font-thin">+</span>
+			<span class="m-auto text-xl font-thin v-sub">+</span>
 		</button>
 	{/if}
 </div>

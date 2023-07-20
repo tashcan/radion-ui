@@ -1,5 +1,6 @@
 <script lang="ts">
 import 'virtual:uno.css';
+import '@unocss/reset/tailwind-compat.css'
 </script>
 
 <main data-sveltekit-prefetch class="py-4 w-full mx-auto flex justify-center flex-1">
