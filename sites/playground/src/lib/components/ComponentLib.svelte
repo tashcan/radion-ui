@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import {
     Slider,
     TextInput,
@@ -36,8 +36,8 @@
 
   let tableFilter = '';
 
-  let listboxValue;
-  let dropdownValue;
+  let listboxValue: any;
+  let dropdownValue: any;
 
   let tableHeaders = [
     {
@@ -156,7 +156,7 @@
       </div>
 
       <div class="w-full">
-        <Card class="p-4 flex flex-col dark:bg-dark-500 bg-light-500 rounded-2 shadow-lg">
+        <Card>
           <CardHeader>
               <CardTitle>Some kind of Title or whatever</CardTitle>
               <CardSubtitle>This subtitle</CardSubtitle>
@@ -164,7 +164,7 @@
           <CardContent>
               <Button class="h-8">Test</Button>
               <Button class="h-8" iconLeft={AdjustmentsVertical}>Test</Button>
-              <Button class="h-8" iconRight={AdjustmentsVertical}>Test</Button>   
+              <Button class="h-8" iconRight={AdjustmentsVertical}>Test</Button>
           </CardContent>
         </Card>
       </div>

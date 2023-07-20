@@ -11,7 +11,7 @@
 	type OptionType = X & { name: string };
 
 	let selection: OptionType | null | undefined = null;
-	export let value: unknown;
+	export let value: OptionType[keyof OptionType];
 	export let options: OptionType[] = [];
 	export let key: keyof OptionType | undefined = undefined;
 	let activeValue: OptionType | null = null;

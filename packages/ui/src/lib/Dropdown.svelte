@@ -8,14 +8,14 @@
 	import ListboxListItem from './ListboxListItem.svelte';
 
 	type X = $$Generic; // any
-	type OptionType = Omit<X, 'name' | 'class' | 'display'> & {
+	type OptionType = X & {
 		name: string;
 		class?: string;
 		display?: boolean | undefined;
 	};
 
 	let selection: OptionType | null | undefined = null;
-	export let value: unknown;
+	export let value: OptionType[keyof OptionType];
 	export let options: Array<OptionType>;
 	export let key: keyof OptionType | undefined = undefined;
 	let activeValue: OptionType | null = null;
